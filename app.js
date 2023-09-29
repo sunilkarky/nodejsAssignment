@@ -74,10 +74,42 @@ app.get("/delete/:id",async(req,res)=>{
     console.log("deletion succcessfull")
         res.redirect("/")
 
+})
 
 
+app.get("/editPost/:id",async(req,res)=>{
+    // console.log(req.params.id)
+    const id=req.params.id
+    const post=await posts.findAll({
+        where:{
+            id:id
+        }
+    })
+    // console.log(post)
+    res.render("editPost",{post:post})
 
 })
+
+app.post("/editPost/:id",async(req,res)=>{
+
+    console.log(req.params.id)
+    const id=req.params.id
+    const {title,subtitle,description}=req.body
+    const edit=await posts.update({
+        title:title,
+        subtitle:subtitle,
+        description:description
+    },{
+        where:{
+            id:id
+        }
+    })
+    console.log("edit successfull")
+    res.redirect("/")
+
+})
+
+
 
 app.listen(3000,(req,res)=>{
     console.log("Node has started at port 3000 ")
