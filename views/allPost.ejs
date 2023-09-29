@@ -11,10 +11,17 @@
         }
 
         .post {
+
             background-color: #fff;
+            margin-right: 200px;
+            width:80%;
+            /* width:70%; */
+            height:auto;
+            
             border-radius: 8px;
             /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
             margin: 20px;
+            margin-left: 140px;
             padding: 20px;
         }
 
@@ -90,6 +97,7 @@
                 <h1 class="post-title"><%- post.title %></h1>  <!--title is cplumn name --->
                 <h2 class="post-subtitle"><%- post.subtitle %></h2>
                 <p class="post-description"><%- post.description %></p> 
+                <u><a href="/singlePost/<%-post.id %>">See more</a></u>
             </div>
 
 

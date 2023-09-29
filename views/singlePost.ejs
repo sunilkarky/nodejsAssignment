@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Post Website</title>
+  <style>
+    body {
+            font-family: Arial, sans-serif;
+            background-color: powderblue;
+            margin: 0;
+            padding: 0;
+        }
+
+        .post {
+            background-color:lightslategray;
+            border-radius: 18px;
+            box-shadow: 1 14px 16px rgba(201, 27, 27, 0.1);
+            margin: 40px;
+            padding: 20px;
+           
+            
+            /* display:flex; */
+        }
+
+        .post-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            /* margin:8px; */
+        }
+
+        .post-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .post-description {
+            font-size: 16px;
+            line-height: 20;
+            color: #444;
+            margin-top: 10px;
+        }
+
+
+        .flexing{
+            display :flex;
+            flex-wrap: nowrap;
+        }
+    /* Navbar */
+    .navbar {
+      background-color:powderblue;
+      color: #080808;
+      padding: 10px;
+      text-align: center;
+    }
+    .navbar a {
+      color: #080808;
+      text-decoration: none;
+      border-radius: 4px solid black;
+    }
+    .navbar a:hover {
+      color:blue;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <h1><div><u>Post</u></div></h1>
+    <div>
+    <a href="/">Home</a>
+    
+    <body>
+            <div class="post">
+                <h1 class="post-title"><%-post[0].title %></h1>  
+                <h2 class="post-subtitle"><%-post[0].subtitle%></h2>
+                
+                <p class="post-description"><%- post[0].description%></p> 
+                <button><a href="">Edit</a></button>
+                <button><a href="/delete/<%-post[0].id%>">Delete</a></button>
+            </div>
+
+
+      
+      
+    
+        
+
+    
+</nav>
+</body></html>

@@ -26,21 +26,48 @@
   }
   
   .form-submit {
-    background-color: #000;
-    color: #fff;
+    /* background-color:#fff; */
+    color: #000000;
     padding: 10px;
     border: 1px solid #000;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
   }
   
   .form-submit:hover {
     background-color: #333;
   }
+  /* Navbar */
+  .navbar {
+      background-color:powderblue;
+      color: #080808;
+      padding: 10px;
+      text-align: center;
+    }
+    .navbar a {
+      color: #080808;
+      text-decoration: none;
+      border-radius: 4px solid black;
+    }
+    .navbar a:hover {
+      color:blue;
+    }
+    .post{
+      padding:60px;
+      width:60%;
+      height:auto;
+      background-color: blue;
+    }
   </style>
+  <body>
+    <nav class="navbar">
+      <h1><div><u>Post</u></div></h1>
+      <div>
+      <a href="/">Home</a>
+      </nav>
+      <div>
   <form action="/newPost" method="post">
-    <h1 class="form-title">New Post</h1>
-    <h2 class="form-subtitle">Please enter your information below.</h2>
+    <h2 class="form-subtitle">Please enter information below.</h2>
   
     <label for="title">Title</label>
     <input type="text" name="title" id="title" class="form-input" />
@@ -56,4 +83,5 @@
     <button type="submit" class="form-submit">Submit</button>
     <button class="form-submit"><a href="/">Cancel</a></button>
   </form>
+  </div>
   
